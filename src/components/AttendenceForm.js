@@ -71,7 +71,7 @@ const AttendanceForm = () => {
   };
 
   const handleClick = async () => {
-    const response = await fetch("/api/hrs/checkout", {
+    const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/checkout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
