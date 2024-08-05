@@ -34,8 +34,8 @@ const Perfomance = () => {
     });
 
   return (
-    <div className="w-full">
-      <ResponsiveContainer width="100%"
+    <div className="">
+      <ResponsiveContainer 
         height={250}
         
         
@@ -45,7 +45,7 @@ const Perfomance = () => {
         
         data={data}
         margin={{ top: 5, bottom: 5 }}
-        className="ms-[-60px] w-[600px] md:w-[730px]"
+        className="ms-[-23px] w-[500px] md:w-[730px] "
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" className="font-semibold text-black" />

@@ -14,9 +14,9 @@ const Login = () => {
   };
 
   return (
-    <div className="mt-[150px] ">
+    <div className="mt-[150px] p-5 md:p-0">
       <form
-        className="login border border-gray-600 shadow-md shadow-slate-600"
+        className="login  border border-gray-600 shadow-md shadow-slate-600"
         onSubmit={hadlesubmit}
       >
         <h3 className="text-[18px] font-bold pb-3">Login</h3>

@@ -86,13 +86,43 @@ function ChagePassword() {
       console.error(error);
     }
   };
+  const getInputStyle = () => {
+    const width = window.innerWidth < 768 ? '25px' : '40px';
+    const height = window.innerWidth < 768 ? '25px' : '40px';
 
+    return {
+      border: "1px solid #7480ff",
+      borderRadius: '8px',
+      width: width,
+      height: height,
+      fontSize: "20px",
+      fontWeight: "800",
+      backgroundColor: "transparent",
+      margin: "2px",
+    };
+  };
+
+  // Use state to trigger re-render on window resize
+  const [inputStyle, setInputStyle] = useState(getInputStyle());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setInputStyle(getInputStyle());
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <div className=" flex ms-8 md:ms-0 justify-center items-center ">
-      <div className="mt-[125px] flex flex-col justify-center items-center w-full border border-primary md:p-20 mr-10 min-h-[550px]">
-        <div className="w-full max-w-sm mt-3  shadow-none md:shadow-sm md:shadow-slate-600 flex flex-col justify-center items-center p-10 md:p-5">
+      <div className="mt-[125px] flex flex-col justify-center items-center w-full border border-primary md:p-20 mr-5 min-h-[550px]  ">
+        <div className="w-full max-w-sm mt-3  shadow-none md:shadow-sm md:shadow-slate-600 flex flex-col justify-center items-center p-10  md:p-5">
           <div className="w-full max-w-xs flex justify-center items-center">
-            <h3 className=" text-xl font-bold mb-4">Change Password</h3>
+            <h3 className="text-base md:text-xl font-bold mb-4">Change Password</h3>
           </div>
           {active === 0 && (
             <>
@@ -132,16 +162,7 @@ function ChagePassword() {
                 numInputs={6}
                 renderSeparator={<span> </span>}
                 renderInput={(props) => <input {...props} />}
-                inputStyle={{
-                  border: "1px solid #7480ff",
-                  borderRadius: "8px",
-                  width: "40px",
-                  height: "40px",
-                  fontSize: "20px",
-                  fontWeight: "800",
-                  backgroundColor: "transparent",
-                  margin: "3px",
-                }}
+                inputStyle={inputStyle}
               />
               <div className="w-full flex justify-end mt-1">
                 <span className="mr-3">{formatTime(timeLeft)}</span>

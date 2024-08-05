@@ -17,7 +17,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="mt-[125px] ">
+    <div className="md:mt-[125px] mt-[60px] p-5 md:p-0">
       <form
         className="login border border-gray-600 shadow-md shadow-slate-600"
         onSubmit={hadlesubmit}

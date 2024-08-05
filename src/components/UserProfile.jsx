@@ -84,7 +84,7 @@ const UserProfile = () => {
 
   return (
     <div className=" flex ms-8 md:ms-0 justify-center items-center ">
-      <div className="mt-[125px] flex flex-col justify-center items-center w-full border border-primary p-20 mr-10 min-h-[550px]">
+      <div className="mt-[125px] flex flex-col justify-center items-center w-full border border-primary p-5 md:p-20 md:mr-10 min-h-[550px] mr-5">
         <div className="">
           <label htmlFor="profileImage" className="avatar cursor-pointer">
             <div className="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
