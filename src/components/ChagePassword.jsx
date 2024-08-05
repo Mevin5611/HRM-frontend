@@ -35,7 +35,7 @@ function ChagePassword() {
 
   const handleVerify = async () => {
     try {
-      const response = await fetch("/api/user/sendotp", {
+      const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/user/sendotp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +55,7 @@ function ChagePassword() {
 
   const handlepswchange = async () => {
     try {
-      const response = await fetch("/api/user/changePassword", {
+      const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/user/changePassword", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

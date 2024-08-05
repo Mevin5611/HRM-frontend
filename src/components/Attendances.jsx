@@ -10,7 +10,7 @@ const Attendances = () => {
   useEffect(() => {
     const fetchAttenadance = async () => {
       try {
-        const response = await fetch("/api/hrs/getAttendances", {
+        const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/getAttendances", {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },

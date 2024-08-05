@@ -17,7 +17,7 @@ const Viewreport = () => {
     useEffect(() => {
         const fetchEmployees = async () => {
           try {
-            const response = await fetch("/api/hrs/getEmploye", {
+            const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/getEmploye", {
               headers: {
                 Authorization: `Bearer ${user.token}`,
               },

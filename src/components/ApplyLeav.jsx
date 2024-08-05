@@ -24,7 +24,7 @@ const ApplyLeav = () => {
 
         const Leav  = { email, reason, name };
 
-        const response = await fetch('/api/hrs/applyLeav', {
+        const response = await fetch('https://hrm-backend-zjvm.onrender.com/api/hrs/applyLeav', {
             method: 'POST',
             body: JSON.stringify(Leav),
             headers: {

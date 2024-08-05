@@ -21,7 +21,7 @@ const AttendanceCalendar = () => {
   useEffect(() => {
     const fetchAttendance = async () => {
       try {
-        const response = await fetch("/api/hrs/getAttendance", {
+        const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/getAttendance", {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },
@@ -80,7 +80,7 @@ const AttendanceCalendar = () => {
       const startOfPrevMonth = startOfMonth(prevMonth);
       const endOfPrevMonth = endOfMonth(prevMonth);
 
-      const response = await fetch("/api/hrs/getAttendance", {
+      const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/getAttendance", {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },

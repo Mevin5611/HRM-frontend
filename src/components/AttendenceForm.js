@@ -20,7 +20,7 @@ const AttendanceForm = () => {
   useEffect(() => {
     const fetchAttendance = async () => {
       try {
-        const response = await fetch("/api/hrs/getAttendance", {
+        const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/getAttendance", {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },
@@ -48,7 +48,7 @@ const AttendanceForm = () => {
 
     const Attendance = { email, status, name };
 
-    const response = await fetch("/api/hrs/", {
+    const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/", {
       method: "POST",
       body: JSON.stringify(Attendance),
       headers: {

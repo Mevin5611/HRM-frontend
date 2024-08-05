@@ -10,7 +10,7 @@ export const useSignup = ()=>{
     setIsLoading(true)
     setError(false)
 
-    const response = await fetch('/api/user/signup-employee',{
+    const response = await fetch('https://hrm-backend-zjvm.onrender.com/api/user/signup-employee',{
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({email,password,name,mob,address,jobrole})

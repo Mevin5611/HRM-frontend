@@ -16,7 +16,7 @@ function Employees() {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await fetch("/api/hrs/getEmploye", {
+        const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/getEmploye", {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },
@@ -41,7 +41,7 @@ function Employees() {
 
     const salary = { basic, incentive, date, workdays, id };
 
-    const response = await fetch("/api/hrs/paySalary", {
+    const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/paySalary", {
       method: "POST",
       body: JSON.stringify(salary),
       headers: {
@@ -72,7 +72,7 @@ function Employees() {
 
     const performanceData = { id, percentage, date };
 
-    const response = await fetch("/api/hrs/addPerfomance", {
+    const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/addPerfomance", {
       method: "POST",
       body: JSON.stringify(performanceData),
       headers: {
@@ -92,7 +92,7 @@ function Employees() {
   const handleRole = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`/api/hrs/updateUserRole/${id}`, {
+    const response = await fetch(`https://hrm-backend-zjvm.onrender.com/api/hrs/updateUserRole/${id}`, {
       method: "PUT",
       body: JSON.stringify({ role }),
       headers: {

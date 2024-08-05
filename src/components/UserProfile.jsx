@@ -13,7 +13,7 @@ const UserProfile = () => {
       const filereader = new FileReader();
       filereader.onloadend = async () => {
         const profileImage = filereader.result;
-        const response = await fetch("/api/user/updateProfile", {
+        const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/user/updateProfile", {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const UserProfile = () => {
   const handlInfo = async()=>{
     try {
       
-      const response = await fetch("/api/user/updateUserInfo",{
+      const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/user/updateUserInfo",{
         method:'PUT',
         headers: {
           "Content-Type": "application/json",

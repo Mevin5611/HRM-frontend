@@ -8,7 +8,7 @@ const LeaveStatus = () => {
   useEffect(() => {
     const fetchLeaves = async () => {
       try {
-        const response = await fetch("/api/hrs/getLeaveRequest", {
+        const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/getLeaveRequest", {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },

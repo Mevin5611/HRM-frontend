@@ -9,7 +9,7 @@ const LeaveRequests = () => {
   useEffect(() => {
     const fetchLeaves = async () => {
       try {
-        const response = await fetch("/api/hrs/getLeaveRequest", {
+        const response = await fetch("https://hrm-backend-zjvm.onrender.com/api/hrs/getLeaveRequest", {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },
@@ -32,7 +32,7 @@ const LeaveRequests = () => {
 
   const handleStatus = async (id, status) => {
     try {
-      const response = await fetch(`/api/hrs/LeaveStatus`, {
+      const response = await fetch(`https://hrm-backend-zjvm.onrender.com/api/hrs/LeaveStatus`, {
         method: "POST",
         body: JSON.stringify({ id, status }),
         headers: {
