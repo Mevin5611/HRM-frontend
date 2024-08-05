@@ -9,7 +9,6 @@ import AllLeaveStatus from "../components/AllLeaveStatus";
 import PaySlip from "../components/PaySlip";
 import ViewPayslip from "../components/ViewPayslip";
 import Viewreport from "../components/Viewreport";
-import ViewUsers from "../components/ViewUsers";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../hooks/useAuthContext";
 import AttendanceCalendar from "../components/AttendanceCalendar";
@@ -467,7 +466,7 @@ user && user?.user?.role === "Employee" ? 1 :0
             <ViewPayslip />
           )}
           {user && user?.user?.role === "Admin" && active === 9 && <Viewreport />}
-          {user && user?.user?.role === "Admin" && active === 11 && <ViewUsers />}
+          
           {active === 12 && <UserProfile/>}
           {active === 13 && <ChagePassword/>}
         </div>
