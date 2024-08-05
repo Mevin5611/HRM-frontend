@@ -39,8 +39,8 @@ user && user?.user?.role === "Employee" ? 1 :0
       <div className="w-[15%]  text-white/60 z-50 ">
         <div class="fixed flex flex-col top-[70px] bg-[#1D232A] text-white/60 h-full  col-span-8 border-r border-slate-600">
           <div class="overflow-y-auto overflow-x-hidden flex-grow">
-            <div className="flex justify-center mt-4 block md:hidden" >
-              {isCollapse ? <IoIosArrowDropright onClick={()=>dispatch({type:'NOTISCOLLAPSE'})} size={25}/> : <IoIosArrowDropleft onClick={()=>dispatch({type:'ISCOLLAPSE'})} size={25}/>}
+            <div className="flex  mt-4 block md:hidden justify-center " >
+              {isCollapse ? <IoIosArrowDropright  onClick={()=>dispatch({type:'NOTISCOLLAPSE'})} size={25}/> : <IoIosArrowDropleft onClick={()=>dispatch({type:'ISCOLLAPSE'})} size={25}/>}
              
              
 

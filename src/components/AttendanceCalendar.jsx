@@ -108,26 +108,26 @@ const AttendanceCalendar = () => {
   return (
     <div className="p-4 mt-[100px]">
       <div className=" flex flex-col md:flex-row md:justify-between justify-start items-start md:items-center mb-4">
-        <h2 className="text-xl  ms-5 md:text-2xl font-bold">{format(currentDate, 'MMMM yyyy')}</h2>
-        <div className="flex  items-center justify-between gap-2 mt-5 md:mt-0 ms-3 md:ms-0">
+        <h2 className="text-xl  ms-8 md:text-2xl font-bold">{format(currentDate, 'MMMM yyyy')}</h2>
+        <div className="flex  items-center justify-between gap-2 mt-5 md:mt-0 ms-8 md:ms-0">
           <div className="flex items-center justify-center">
-            <div className="md:w-5 md:h-5 w-3 h-3 border border-green-500 hover:bg-green-500 rounded-sm"></div>
+            <div className="md:w-5 md:h-5 w-4 h-4 border border-green-500 hover:bg-green-500 rounded-sm"></div>
             <span className="ms-2 text-xs ">Present</span>
           </div>
           <div className="flex items-center justify-center">
-            <div className="md:w-5 md:h-5 w-3 h-3 border border-yellow-500 hover:bg-yellow-500 rounded-sm"></div>
+            <div className="md:w-5 md:h-5 w-4 h-4 border border-yellow-500 hover:bg-yellow-500 rounded-sm"></div>
             <span className="ms-2 text-xs">Holiday</span>
           </div>
           <div className="flex items-center justify-center">
-            <div className="md:w-5 md:h-5 w-3 h-3 border border-red-500 hover:bg-red-500 rounded-sm"></div>
+            <div className="md:w-5 md:h-5 w-4 h-4 border border-red-500 hover:bg-red-500 rounded-sm"></div>
             <span className="ms-2 text-xs">Absent</span>
           </div>
           <div className="flex items-center justify-center">
-            <div className="md:w-5 md:h-5 w-3 h-3 border border-white hover:bg-white rounded-sm"></div>
+            <div className="md:w-5 md:h-5 w-4 h-4 border border-white hover:bg-white rounded-sm"></div>
             <span className="ms-2 text-xs">Days</span>
           </div>
         </div>
-        <div className="flex justify-between gap-20 md:gap-4 ms-7 md:ms-0 mt-5 md:mt-0">
+        <div className="flex justify-between gap-32 md:gap-4 ms-7 md:ms-0 mt-5 md:mt-0">
           <button onClick={handlePrevMonth} className="btn btn-primary w-20 text-xs md:text-base md:w-fit">Previous Month</button>
           {/* <button onClick={handleShowPrevMonthData} className="btn btn-secondary">Show Previous Month Data</button> */}
           <button onClick={handleNextMonth} className="btn btn-primary w-20 text-xs md:text-base md:w-fit">Next Month</button>
